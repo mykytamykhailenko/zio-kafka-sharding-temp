@@ -1,0 +1,67 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/mykyta.mykhailenko/Desktop/codescreen/zio-kafka-sharding-refactoring/target/scala-2.13/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$ShardEvent$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Shard$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$typecreator4$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Entity$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Reply$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Entity.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Shard.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$typecreator12$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$typecreator8$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Reply.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$ShardingDescription$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$ShardingDescription.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$ShardEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$ShardEvent$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Shard$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$typecreator4$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Entity$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Reply$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Entity.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Shard.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$typecreator12$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$typecreator8$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Reply.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$ShardingDescription$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$ShardingDescription.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$ShardEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRolling back changes to class files.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRestoring class files: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Shard$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Entity$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$ShardEvent$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$ShardingDescription$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$typecreator8$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Entity.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Reply.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$typecreator12$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$ShardEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Shard.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$Reply$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sharding$ShardingDescription.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PartitionRegisterer$$typecreator4$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/mykyta.mykhailenko/Desktop/codescreen/zio-kafka-sharding-refactoring/target/scala-2.13/classes.bak[0m

@@ -1,0 +1,14 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(compile, Some(25bf1e96-e531-44b1-84dc-d57269386cb3), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /home/mykyta.mykhailenko/Desktop/codescreen/zio-kafka-sharding-refactoring/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/mykyta.mykhailenko/Desktop/codescreen/zio-kafka-sharding-refactoring/src/main/scala/zio/kafka/sharding/Sharding.scala:135:48: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : scala.collection.immutable.Map[String,zio.kafka.sharding.PartitionRegisterer[_]][0m
+[0m[[0m[31merror[0m] [0m[0m required: zio.kafka.sharding.model.PartitionRegisterPool[0m
+[0m[[0m[31merror[0m] [0m[0m    startSharding(stream, PartitionRegisterPool(self, shardingDescription, entityDescriptions))[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 2 s, completed Mar 10, 2023, 3:28:38 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
