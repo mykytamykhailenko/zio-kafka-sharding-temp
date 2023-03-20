@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(compile, Some(6b830fcd-d280-470c-9b8d-e66ea3037b07), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /home/mykyta.mykhailenko/Desktop/codescreen/zio-kafka-sharding-refactoring/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/mykyta.mykhailenko/Desktop/codescreen/zio-kafka-sharding-refactoring/src/main/scala/zio/kafka/sharding/model/PartitionRegisterPool.scala:24:26: overloaded method apply needs result type[0m
+[0m[[0m[31merror[0m] [0m[0m    PartitionRegisterPool(entityDescriptions.map(description =>[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Mar 10, 2023, 5:21:33 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

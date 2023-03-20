@@ -20,7 +20,7 @@ case class PartitionRegisterPool(pool: Map[ID, PartitionRegisterer[_]]) {
 
 object PartitionRegisterPool {
 
-  def apply(sharding: Sharding, shardingDescription: ShardingDescription, entityDescriptions: Seq[EntityDescription[_]]) =
+  def apply(sharding: Sharding, shardingDescription: ShardingDescription, entityDescriptions: Seq[EntityDescription[_]]): PartitionRegisterPool =
     PartitionRegisterPool(entityDescriptions.map(description =>
       description.entityID -> PartitionRegisterer(description, shardingDescription, sharding))
       .toMap)

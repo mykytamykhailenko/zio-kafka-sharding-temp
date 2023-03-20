@@ -125,6 +125,7 @@ case class Sharding private[sharding](private val shardingDescription: ShardingD
         .fork *> ZIO.succeed(self)
   }
 
+  // TODO: I don't need to create the consumer stream here.
   private[sharding] def start(entityDescriptions: EntityDescription[_]*): UIO[Sharding] = {
 
     val stream: ByteArrayPartitionedStream =
@@ -165,9 +166,13 @@ object Sharding {
 
   } yield sharding
 
+  // TODO: Distinguish between Reply and ReplyOnce
+
   case class Reply[T] private[sharding](private val replyId: ID,
                                         private val replyPartition: Partition) {
 
+    // How do I prevent the user from sending an event when the pod is dead on the other side?
+    // I think it will be a pitfall I need to talk about.
     def reply(event: T)(implicit tag: Tag[T]): RIO[Sharding.Shard[T], UIO[Done]] =
       ZIO.serviceWithZIO[Sharding.Shard[T]](_.tell(replyId, replyPartition, event))
 
@@ -179,7 +184,7 @@ object Sharding {
                                         private val shardGroup: ShardGroup[T],
                                         private val topic: String,
                                         private val producer: Producer,
-                                        /*private val hub: Hub[Partition]*/) {
+                                        private val hub: Hub[Partition] = ???) {
 
     private def ignoreInterruption[R, E, A](zio: ZIO[R, E, A]): ZIO[R, E, Done] =
       zio
@@ -275,6 +280,23 @@ object Sharding {
       } yield promise
     }
 
+    private def externalRebalance(partition: Partition): UIO[Promise[Nothing, Done]] =
+      for {
+        promise <- Promise.make[Nothing, Done]
+
+        // I need to close the stream once
+        // the stream has been closed by the user
+        stream =
+          ZStream
+            .fromHub(hub)
+            .haltWhen(promise.await)
+            .filter(_ == partition)
+            .run(ZSink.head)
+
+        _ <- (ZIO.scoped(stream) *> promise.succeed()).fork
+
+      } yield promise
+
     /**
      * Creates a stream containing replies.
      * Once the requester doesn't need the stream any more,
@@ -312,21 +334,16 @@ object Sharding {
         embedded = reply(Reply(replyId, partition))
 
         partition <- tell(id, embedded).flatten
-/*
-        promise <- Promise.make[Nothing, Done]
 
-        _ <- ZIO.scoped(
-          ZStream
-            .fromHub(hub)
-            .filter(_ == partition)
-            .runForeach(_ => promise.succeed().unit)).fork*/
+        external <- externalRebalance(partition)
 
         stream =
           ZStream
             .fromQueueWithShutdown(queue)
-            .interruptWhen(shard.rebalance.await)
-            //.interruptWhen(promise.await)
+            .interruptWhen(shard.rebalance.await *> ZIO.fail(Rebalance))
+            .interruptWhen(external.await *> ZIO.fail(Rebalance))
             .ensuring(shard.entities.remove(replyId))
+            .ensuring(entity.shutdown(backpressure = true))
 
       } yield idleTimeout.fold[Stream[Failure, T]](stream)(stream.timeoutFail(Idle))
 
